@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwingScrollbar from "tailwind-scrollbar"
 
 const config: Config = {
   content: [
@@ -14,6 +15,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [tailwingScrollbar],
 };
 export default config;
