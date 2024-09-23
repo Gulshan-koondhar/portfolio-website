@@ -7,7 +7,12 @@ import { useState } from "react";
 import NavItems from "./NavItems";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
 
+  // Handle click and set active link
+  const handleClick = (link: string) => {
+    setActiveLink(link);
+  };
   const handleMenu = () => {
     setIsOpen((s) => (s = !s));
   };
@@ -31,15 +36,31 @@ const Navbar = () => {
                   <nav className="rounded-md text-center">
                     <ul className="space-y-4">
                       <li>
-                        <Link href="#about" className="active">
+                        <Link
+                          href="#about"
+                          onClick={() => handleClick("about")}
+                          className={activeLink === "about" ? "active" : ""}
+                        >
                           About
                         </Link>
                       </li>
                       <li>
-                        <Link href="#projects">Projects</Link>
+                        <Link
+                          href="#projects"
+                          onClick={() => handleClick("projects")}
+                          className={activeLink === "projects" ? "active" : ""}
+                        >
+                          Projects
+                        </Link>
                       </li>
                       <li>
-                        <Link href="#skills">Skills</Link>
+                        <Link
+                          href="#skills"
+                          onClick={() => handleClick("skills")}
+                          className={activeLink === "skills" ? "active" : ""}
+                        >
+                          Skills
+                        </Link>
                       </li>
                     </ul>
                   </nav>
