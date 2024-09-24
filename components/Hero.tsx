@@ -24,13 +24,13 @@ const Hero = () => {
               </p>
 
               <div className="flex gap-8 mt-8">
-                <button className="text-sm  border-gray-700  px-4 rounded-md bg-sky-400 text-zinc-900 hover:bg-sky-300">
+                <button className="text-sm  border-gray-700  px-2 rounded-md bg-sky-400 text-zinc-900 hover:bg-sky-300">
                   <Link href="/my-resume.pdf" className="flex items-center">
                     Download CV
-                    <Download width={18} height={18} className="ml-2" />
+                    <Download width={15} height={15} className="ml-2" />
                   </Link>
                 </button>
-                <button className="border-2 py-2 px-4 rounded-md flex items-center border-gray-700">
+                <button className="text-sm border-2 py-2 px-2 rounded-md flex items-center border-gray-700">
                   <Link href="#about" className="flex items-center">
                     Scroll down
                     <ArrowDown width={18} height={18} className="ml-2" />

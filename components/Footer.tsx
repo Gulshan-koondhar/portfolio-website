@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="mt-20 border-t-2 border-zinc-500">
       <div className="max-w-screen-lg mx-auto px-4">
-        <div className="flex flex-col items-center gap-4 text-zinc-600 mt-2">
+        <div className="flex flex-col items-center gap-4 text-zinc-600 my-10">
           <ul className="flex gap-8">
             <li>
               <Link
