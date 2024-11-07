@@ -23,7 +23,7 @@ const Skills = () => {
       <div className="max-w-screen-lg mx-auto px-4">
         <h2 className="text-xl font-bold">Skills</h2>
         <div className="flex flex-col sm:flex-row">
-          <div className="flex-1 mt-2">
+          <div className="w-1/3 lg:flex-1 mt-2">
             <h1 className="text-xl font-semibold">Services</h1>
             <div>
               {services.map(({ title, desc }, key) => {
@@ -41,19 +41,40 @@ const Skills = () => {
           </div>
           <div className="flex-1 mt-2">
             <h1 className="text-xl font-semibold">SKills</h1>
-            {skills.map(({ name, level }, index) => {
-              return (
-                <div key={index} className="rounded-lg shadow-sm">
-                  <h3 className="text-xl font-semibold mb-2">{name}</h3>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div
-                      className="bg-blue-500 h-2 rounded-full"
-                      style={{ width: `${level}%` }}
-                    ></div>
+            <div className="flex flex-wrap">
+              {skills.map(({ name, level }, index) => {
+                return (
+                  <div key={index} className="rounded-lg shadow-sm">
+                    <div className="relative w-32 h-32">
+                      <svg className="w-full h-full">
+                        <circle
+                          cx="50%"
+                          cy="50%"
+                          r="50"
+                          stroke="gray"
+                          strokeWidth="8"
+                          fill="none"
+                        />
+                        <circle
+                          cx="50%"
+                          cy="50%"
+                          r="50"
+                          stroke="blue"
+                          strokeWidth="8"
+                          fill="none"
+                          strokeDasharray="314"
+                          strokeDashoffset={314 - (314 * level) / 100}
+                          className="transition-all duration-500 ease-in-out"
+                        />
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-white text-sm">{name}</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
