@@ -1,22 +1,30 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import hero from "@/public/Hero-banner.png";
 import { Download, ArrowDown } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { fadeIn } from "./variants";
 
 const Hero = () => {
   return (
     <div>
-      <section className="mt-20" id="home">
+      <section className="mt-20 " id="home">
         <div className="max-w-screen-lg mx-auto px-4">
           <div className="flex flex-col sm:flex-row w-full sm:items-center">
-            <div className="flex-1">
+            <motion.div
+              variants={fadeIn("down", 0.2)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+              className="flex-1"
+            >
               <h3 className="text-xs bg-gradient-to-r from-[#fafafa] to-[#a1a1aa] text-transparent bg-clip-text sm:text-sm mb-4">
                 Crafting Exceptional Digital Experiences
               </h3>
               <h2 className="text-3xl bg-gradient-to-r from-[#fafafa] to-[#a1a1aa] text-transparent bg-clip-text sm:text-4xl mb-4">
-                Front-end Web Developer | Building Intuitive and Responsive
-                Interfaces
+                Front-end Web Developer
               </h2>
               <p className="text-lg bg-gradient-to-r from-[#fafafa] to-[#a1a1aa] text-transparent bg-clip-text sm:text-xl mb-4">
                 Expertise in creating visually stunning and user-centric web
@@ -37,12 +45,18 @@ const Hero = () => {
                   </Link>
                 </button>
               </div>
-            </div>
-            <div className="flex-1 items-center justify-center">
+            </motion.div>
+            <motion.div
+              variants={fadeIn("up", 0.5)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+              className="flex-1 items-center justify-center"
+            >
               <figure className="flex items-center justify-center bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-full">
                 <Image src={hero} alt="GMK" className="rounded-full" />
               </figure>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

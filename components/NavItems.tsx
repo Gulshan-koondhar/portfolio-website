@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -9,10 +10,23 @@ const NavItems = () => {
     setActiveLink(link);
   };
   return (
-    <div className="p-2 rounded-md flex sm:gap-32 lg:gap-64 xl:gap-64">
+    <motion.div
+      initial={{ x: 1000 }}
+      animate={{ x: 0 }}
+      className="p-2 rounded-md flex sm:gap-32 lg:gap-64 xl:gap-64"
+    >
       <div>
         <nav className="bg-zinc-600 py-2 px-4 rounded-md text-center">
           <ul className="flex gap-4">
+            <li>
+              <Link
+                href="/"
+                onClick={() => handleClick("/")}
+                className={activeLink === "/" ? "active" : ""}
+              >
+                Home
+              </Link>
+            </li>
             <li>
               <Link
                 href="#about"
@@ -20,6 +34,16 @@ const NavItems = () => {
                 className={activeLink === "#about" ? "active" : ""}
               >
                 About
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="#skills"
+                onClick={() => handleClick("#skills")}
+                className={activeLink === "#skills" ? "active" : ""}
+              >
+                Skills
               </Link>
             </li>
             <li>
@@ -31,15 +55,6 @@ const NavItems = () => {
                 Projects
               </Link>
             </li>
-            <li>
-              <Link
-                href="#skills"
-                onClick={() => handleClick("#skills")}
-                className={activeLink === "#skills" ? "active" : ""}
-              >
-                Skills
-              </Link>
-            </li>
           </ul>
         </nav>
       </div>
@@ -48,7 +63,7 @@ const NavItems = () => {
           <Link href="#contact">Contact Me</Link>
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

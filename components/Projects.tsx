@@ -75,14 +75,14 @@ const Projects = () => {
                 height={10}
                 className="w-full rounded-t-md hover:scale-105"
               />
-              <h1 className="text-center text-lg text-gray-900 font-semibold">
+              <h1 className="text-center  text-lg text-gray-900 font-semibold">
                 {title}
               </h1>
               <ul className="flex w-full flex-wrap gap-3 items-center justify-center mt-4">
                 {lang.map((item, index) => (
                   <li
                     key={index}
-                    className="list-none text-blue-800 bg-slate-400 rounded-md px-2"
+                    className="list-none text-sm text-blue-800 bg-slate-400 rounded-md px-2"
                   >
                     {item}
                   </li>
