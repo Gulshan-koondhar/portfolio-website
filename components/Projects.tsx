@@ -19,6 +19,34 @@ const Project = [
     lang: ["#React", "#NextJS", "#Tailwind CSS", "#TypeScript"],
   },
   {
+    title: "FoodTuck Restaurant",
+    ImageSrc: "/foodwebsite.PNG",
+    codeLink: "https://github.com/Gulshan-koondhar/foodtuckrestaurant",
+    webLink: "https://foodtuckrestaurant.vercel.app/",
+    lang: ["#React", "#NextJS", "#Tailwind CSS", "#TypeScript"],
+  },
+  {
+    title: "E-Commerce Website",
+    ImageSrc: "/E-commerce.PNG",
+    codeLink: "https://github.com/Gulshan-koondhar/e-commerce",
+    webLink: "https://e-commerce-website-two-ashen.vercel.app/",
+    lang: ["#React", "#NextJS", "#Tailwind CSS", "#TypeScript"],
+  },
+  {
+    title: "Resume Builder",
+    ImageSrc: "/ResumeBuilder.PNG",
+    codeLink: "https://github.com/Gulshan-koondhar/Resume-Builder",
+    webLink: "https://resume-builder-gamma-six.vercel.app/",
+    lang: ["#HTML", "#CSS", "#TypeScript"],
+  },
+  {
+    title: "MetaBlog",
+    ImageSrc: "/MetaBlog.PNG",
+    codeLink: "https://github.com/Gulshan-koondhar/MileStone-3---Assignemnt",
+    webLink: "https://blog-website-assignment-three.vercel.app/",
+    lang: ["#React", "#NextJS", "#TypeScript", "#TailwindCSS"],
+  },
+  {
     title: "Weather App",
     ImageSrc: "/WeatherApp.jpg",
     codeLink: "https://github.com/Gulshan-koondhar/Weather-App",
@@ -37,14 +65,6 @@ const Project = [
     ImageSrc: "/ExpenseTracker.png",
     codeLink: "https://github.com/Gulshan-koondhar/Expense-Tracker",
     webLink: "https://expense-tracker-one-ivory.vercel.app/",
-    lang: ["#HTML", "#JavaScript", "#CSS"],
-  },
-  {
-    title: "Blogging Site Static",
-    ImageSrc: "/Blogging.png",
-    codeLink:
-      "https://github.com/Gulshan-koondhar/Full-Webites/tree/main/Blog%20Site",
-    webLink: "https://full-webites.vercel.app/",
     lang: ["#HTML", "#JavaScript", "#CSS"],
   },
   {
